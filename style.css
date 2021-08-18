@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(56, 73, 0);
+  color: #fff;
+  padding: 1rem;
+}
+
+.select select {
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  margin-left: 1rem;
+}
+
+.select label {
+  font-size: 1rem;
+}
+
+/* Seats Styling */
+
+.seat {
+  background-color: azure;
+  width: 20px;
+  height: 20px;
+  margin: 0.4rem;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.occupied {
+  background-color: grey;
+}
+
+.selected {
+  background-color: chartreuse;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.legend .seat:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+/* Screen Styling */
+
+.screen {
+  background-color: #fff;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 2rem;
+  transform: rotateX(-45deg);
+  box-shadow: 0 5px 10px #fff;
+}
+
+/* Add Space bettween seats */
+
+.seat:nth-of-type(2),
+.seat:nth-last-of-type(3) {
+  margin-right: 1.4rem;
+}
+
+/* Container Styling */
+
+.container {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+}
+
+/* Legend */
+
+.legend {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.6rem;
+}
+
+/* Span Styling */
+
+.text p span {
+  font-weight: 600;
+  color: chartreuse;
+}
